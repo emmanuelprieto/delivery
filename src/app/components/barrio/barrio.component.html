@@ -1,0 +1,9 @@
+<h2 mat-dialog-title class="text-center">Seleccione su Barrio Actual</h2>
+<mat-dialog-content class="mat-typography">
+    <mat-radio-group aria-label="Select an option" class="example-radio-group" [(ngModel)]="data.barrioSelected">
+        <mat-radio-button class="example-radio-button" [value]="barrio" *ngFor="let barrio of data.barrios; let i = index">{{barrio.nombre}}</mat-radio-button>
+    </mat-radio-group>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close]="data.barrioSelected" cdkFocusInitial>Aceptar</button>
+</mat-dialog-actions>
